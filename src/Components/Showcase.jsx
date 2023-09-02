@@ -27,7 +27,7 @@ const Showcase = () => {
 
         </div>
         <div className="showcase-image">
-          <img src={profile} alt="there is supposed to be an image" />
+          <img src={profile} alt="there is supposed to be a pic" />
         </div>
       </div>
     </section>

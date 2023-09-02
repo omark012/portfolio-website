@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -71,7 +71,7 @@ const Portfolio = () => {
                   <div className="portfolio-card grid">
                     <div className="portfolio-img-wrap">
                       <a href={item.link} target="_blank" rel="noopener noreferrer">
-                        <img src={item.img} alt="there should be an image here" />
+                        <img src={item.img} alt="there should be a pic" />
                         <p className="portfolio-img-description">Visit 🤚 </p>
                       </a>
                     </div>
