@@ -18,7 +18,7 @@ const Contact = () => {
             }))
     }
 
-    const handleSubmit=(event)=>{
+    const handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData)
     }
@@ -26,49 +26,59 @@ const Contact = () => {
 
     return (
         <ScrollAnimation
-        animateIn="fadeIn"
-        animateOut="fadeOut"
-        animateOnce={true}
-        delay={200}
-        offset={225}
+            animateIn="fadeIn"
+            animateOut="fadeOut"
+            animateOnce={true}
+            delay={200}
+            offset={225}
         >
-        <section className="contact" id="contact">
-            <div className="container">
-                <h1 className="contact-heading heading">Contact Me</h1>
-                <div className="contact-container">
-                    <p className="contact-alert">Submit the form below to get in touch with me</p>
-                    <form className='contact-form'  onSubmit={handleSubmit}>
-                        <div className="input-container flex">
-                            <input
-                                type="text"
-                                placeholder="Your Name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                name="name"
-                            />
-                            <input
-                                type="email"
-                                placeholder="Your Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                name="email"
-                            />
-                        </div>
+            <section className="contact" id="contact">
+                <div className="container">
+                    <h1 className="contact-heading heading">Contact Me</h1>
+                    <div className="contact-container">
+                        <p className="contact-alert">Submit the form below to get in touch with me</p>
+                        <form className='contact-form' 
+                        name="contact"
+                            method="POST"
+                            netlify-honeypot="bot-field"
+                            data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p class="hidden">
+                             <label>
+                               Don’t fill this out if you’re human: <input name="bot-field" />
+                             </label>
+                            </p>
+                            <div className="input-container flex">
+                                <input
+                                    type="text"
+                                    placeholder="Your Name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    name="name"
+                                />
+                                <input
+                                    type="email"
+                                    placeholder="Your Email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    name="email"
+                                />
+                            </div>
 
-                        <textarea
-                            className="message"
-                            rows="10"
-                            placeholder="Message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            name="message"
-                        >
-                        </textarea>
-                        <button className="btn form-btn">Let's Talk</button>
-                    </form>
+                            <textarea
+                                className="message"
+                                rows="10"
+                                placeholder="Message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                name="message"
+                            >
+                            </textarea>
+                            <button className="btn form-btn">Let's Talk</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </ScrollAnimation>
     )
 }

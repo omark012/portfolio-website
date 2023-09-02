@@ -53,6 +53,10 @@ html{
     scroll-behavior: smooth;
 }
 
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
 /*  Navbar  */
 
 .header{
