@@ -18,12 +18,6 @@ const Contact = () => {
             }))
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(formData)
-    }
-
-
     return (
         <ScrollAnimation
             animateIn="fadeIn"
@@ -43,7 +37,7 @@ const Contact = () => {
                             netlify-honeypot="bot-field"
                             data-netlify="true">
                             <input type="hidden" name="form-name" value="contact" />
-                            <p class="hidden">
+                            <p className="hidden">
                              <label>
                                Don’t fill this out if you’re human: <input name="bot-field" />
                              </label>
