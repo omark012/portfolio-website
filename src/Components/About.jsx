@@ -20,7 +20,7 @@ const About = () => {
                             <img src={developer} alt="" />
                         </div>
                         <div className="about-text">
-                            <p> Hello! My name is Harry, a frontend developer and an aspiring full-stack (MERN) developer.</p>
+                            <p> Hello! My name is Omar Khan, a frontend developer and an aspiring full-stack (MERN) developer.</p>
                             <br />
                             <p>I like to code things for web, and enjoy bringing ideas to life in the browser. I'm always open to adapt to work with team and work on new frontend skills and technology.</p>
                         </div>

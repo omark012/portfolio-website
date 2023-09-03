@@ -7,6 +7,7 @@ import Skills from './Components/Skills';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Portfolio from './Components/Portfolio';
+import GoToTop from './Components/GoToTop';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Portfolio/>
       <Contact/>
       <Footer/>
+      <GoToTop/>
     </div>
      );
 }
