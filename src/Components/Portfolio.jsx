@@ -12,8 +12,6 @@ import travel from '../images/travel.png';
 import edtech from '../images/edtech.png';
 
 
-
-
 const Portfolio = () => {
 
   const portfolios = [

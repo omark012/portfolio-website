@@ -7,30 +7,23 @@
     --background-transition: background-color 0.2s ease-in-out;
 }
 
-
 .dark-theme{
     --text-color:#fff;
     --bg-color:#102a43;
     --secondary-bg-color:#00406c;
-    --highlight-color:rgb(246, 210, 2);
     --btn-color:rgb(246, 210, 2);
     --btn-hover-color:#333;
-        /* --bg-color:#260d54;
-    --secondary-bg-color:#4d194d; */
+    --highlight-color:rgb(246, 210, 2);
 
 }
 
 .light-theme{
     --text-color:#333;
-    /* --bg-color:#F3FDE8;
-    --secondary-bg-color:#A8DF8E; */
     --bg-color:#E3F6FF;
     --secondary-bg-color:#9DF1DF;
     --btn-color:#0dcfda;
     --btn-hover-color:#fff;
     --highlight-color:rgb(246, 210, 2);
-     /* --bg-color:#F8FFDB;
-    --secondary-bg-color:#FF7D7D; */
 
  }
  
@@ -45,7 +38,6 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
     overflow-x:hidden;
-    background-color: var(--bg-color);
     transition: var(--background-transition);
 }
 
@@ -57,6 +49,8 @@ html{
     visibility: hidden;
     height: 0;
 }
+
+
 /*  Navbar  */
 
 .header{
@@ -165,6 +159,12 @@ html{
     line-height: 4rem;
 }
 
+.showcase-image img{
+    width: 100%;
+    background-color:var(--secondary-bg-color);
+    transition:var(--background-transition) ;
+}
+
 .showcase-text .description{
     color: var(--text-color);
     font-size: 1.25rem;
@@ -208,16 +208,6 @@ html{
     opacity: 1;
     right: 0;
   }
-
-
-.showcase-image{
-   background-color:var(--secondary-bg-color);
-   transition:var(--background-transition) ;
-}
-
-.showcase-image img{
-    width: 100%;
-}
 
 /*  About  */
 
@@ -273,15 +263,15 @@ html{
     width:50%;
 }
 
-.portfolio ,.skill{
-    margin: 3rem 0;
+.portfolio ,.skill,.contact{
+    margin: 4rem 0;
 }
 
 
 /*   Portfolio   */
 
 .portfolio-container{
-    border: 1px var(--highlight-color) solid;
+    border-bottom: 4px var(--highlight-color) solid;
     border-radius: 0.5rem;
     overflow: hidden;
     background-color: var(--secondary-bg-color);
@@ -295,7 +285,7 @@ html{
     position: relative;
     height: 280px;
     width: 440px;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     overflow: hidden;
   }
 
@@ -359,10 +349,80 @@ html{
     background-color: var(--btn-color);
 }
 
+
+/*   Experience   */
+
+.experience-para{
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+}
+
+.experience-card{
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    border-radius: 0.5rem;
+    border-bottom: 4px var(--highlight-color) solid;
+    padding: 2rem;
+}
+
+.job-location{
+    font-style: italic;
+}
+
+.job-scope{
+    margin: 1rem 0 0 1rem;
+}
+
+.job-scope li{
+    letter-spacing: .05em;
+    padding-left: 0.5rem;
+}
+
+.job-scope li:not(:last-child){
+    margin-bottom: 0.5rem;
+}
+
+.experience-img-wrap {
+    position: relative;
+    height: 280px;
+    width: 460px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    
+  }
+
+.experience-img-wrap img{
+      height: 100%;
+      width: 100%;
+  }
+
+.experience-img-description {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(29, 106, 154, 0.4);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    cursor: pointer;
+}
+.experience-img-wrap:hover .experience-img-description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
 /*<<<<<<<<<<------------------------------Contact-------------------------->>>>>>>>>> */
 
 .contact-alert{
-    font-size: 1.1rem;
+    font-size: 1.12rem;
     font-weight: 500;
     text-align: center;
     text-transform: capitalize;
@@ -396,8 +456,13 @@ html{
 }
 
 .message{
-   width: 100%;
+    width: 100%;
+ }
+
+.input-container input:focus ,.message:focus{
+    border: 2px var(--highlight-color) solid;
 }
+
 
 .contact-form .form-btn{
     border: 3px var(--btn-color) solid;
@@ -506,7 +571,6 @@ html{
         position: absolute;
         top: 0;
         left:2%;
-        /* border: 2px blue solid; */
     }
 
     .header .hamburger-menu{
@@ -516,7 +580,6 @@ html{
         top: 0;
         right: 2%;
         margin: auto 0;  
-        /* border: 2px blue solid; */
     }
    
     .header .nav-items{
@@ -536,8 +599,6 @@ html{
         margin: 0 auto;
         transition: all 5s ease-in;
         animation: slideInFromLeft 1s ease-in;
-        /* border: 2px yellow solid; */
-
     }
 
     .header .darkToggle{
@@ -557,6 +618,11 @@ html{
         height: auto;
     }
 
+    .showcase-text .intro{
+          width: 100%;
+          text-align: center;
+    }
+
     .showcase-container{
         grid-template-columns: 1fr !important;
         margin-top: 3rem;
@@ -569,7 +635,7 @@ html{
     }
 
     .showcase-image{
-      width: 40vw;
+      width: 45vw;
       margin: 1rem auto;
     }
     .showcase-text .intro{
@@ -592,11 +658,12 @@ html{
     }
 
     .about-image{
-        width: 40vw;
+        width: 45vw;
         margin: 0 auto;
     }
 
     .about-text{
+        grid-row: 1;
         width: 70%;
         margin: 0 auto;
         font-size: 1rem;
@@ -605,8 +672,6 @@ html{
     }
 
     
-
-
     /* <<<<<<<<<------------------------Skill --------------------------->>>>>>>>>>>>*/
 
     .skill-list{
@@ -620,7 +685,6 @@ html{
     }
 
     /* <<<<<<<<<------------------------Portfolio --------------------------->>>>>>>>>>>>*/
-
 
     .portfolio-img-wrap{
         grid-column: 1/3;
@@ -640,6 +704,28 @@ html{
     
     }
 
+    /* <<<<<<<<<------------------------Experience --------------------------->>>>>>>>>>>>*/
+
+    .experience-card{
+        grid-template-columns: 1fr !important;
+    }
+
+    .experience-para{
+        text-align: center;
+        font-size: 1rem;
+    }
+     .experience-img-wrap{
+        margin: 1rem auto;
+        height: 100%;
+        width: 100%;
+    }
+
+    .experience-text{
+        width: 90%;
+        margin: 0 auto;
+    } 
+
+    
     /* <<<<<<<<<------------------------Contact --------------------------->>>>>>>>>>>>*/
 
     .contact-alert{
@@ -681,9 +767,17 @@ html{
         font-size: 1.5rem;
     }
 
-    .portfolio-img-wrap{
-        /* width: 10rem; */
-        /* height:10rem; */
-    }
+   .portfolio-description{
+       text-align: center;
+   }
+
+   .showcase-image{
+       width: 55vw;
+   }
+
+   .about-image{
+       width: 55vw;
+   }
 
 }
+
