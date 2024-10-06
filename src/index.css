@@ -14,6 +14,7 @@
   --btn-color: rgb(246, 210, 2);
   --btn-hover-color: #333;
   --highlight-color: rgb(246, 210, 2);
+  --submission-bg: #b8d9de;
 }
 
 .light-theme {
@@ -23,6 +24,7 @@
   --btn-color: #0dcfda;
   --btn-hover-color: #fff;
   --highlight-color: rgb(246, 210, 2);
+  --submission-bg: #91f2ff;
 }
 
 * {
@@ -227,8 +229,9 @@ html {
 
 .skill-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   margin: 2.5rem 0;
 }
@@ -398,7 +401,7 @@ html {
   align-items: center;
   background: rgba(29, 106, 154, 0.4);
   color: #fff;
-  visibility: hidden;
+  /* visibility: hidden; */
   opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
   cursor: pointer;
@@ -409,7 +412,22 @@ html {
 }
 
 /*<<<<<<<<<<------------------------------Contact-------------------------->>>>>>>>>> */
+.submission-message {
+  margin-top: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: var(--submission-bg);
+  color: #00796b; /* Darker teal color for the text */
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid #89e4f0; /* Light teal border */
+  transition: opacity 0.5s ease-in-out;
+}
 
+.submission-message.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 .contact-alert {
   font-size: 1.12rem;
   font-weight: 500;

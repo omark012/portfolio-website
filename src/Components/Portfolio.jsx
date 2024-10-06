@@ -1,50 +1,51 @@
-import React from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { PiArrowUpRightBold } from 'react-icons/pi';
-import cloud from '../images/cloud.jpg';
-import weather from '../images/weather.png';
-import travel from '../images/travel.png';
-import edtech from '../images/edtech.png';
-
+import React from "react";
+import ScrollAnimation from "react-animate-on-scroll";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { PiArrowUpRightBold } from "react-icons/pi";
+import cloud from "../images/cloud.png";
+import weather from "../images/weather.png";
+import quizzical from "../images/quizzical.png";
+import slide from "../images/slide.png";
 
 const Portfolio = () => {
-
   const portfolios = [
     {
       id: 1,
-      img: cloud,
-      title: 'cloud hosting website design',
-      description: 'Website is adaptable to all devices, with UI components and animated interactions.',
-      link: 'https://omark012.github.io/cloudhosting-react-website/'
+      img: weather,
+      title: "Weather App",
+      description:
+        "An API-based React weather application built with Vite and Tailwind CSS, providing real-time weather information and additional features.",
+      link: "https://skyways.netlify.app/",
     },
     {
       id: 2,
-      img: edtech,
-      title: 'Edtech website design',
-      description: ' A platform to discover the latest and useful EdTech & Education focused courses, trends & insights, research, reports, product reviews.When referred to with its abbreviation, edtech, it often refers to the industry of companies that create educational technology.',
-      link: 'https://omark012.github.io/edtech-react-website/',
+      img: cloud,
+      title: "Cloud Hosting Website UI",
+      description:
+        "A front-end interface for a cloud hosting platform using React.js and React Router for smooth navigation and animated interactions.",
+      link: "https://omark012.github.io/cloudhosting-react-website/",
     },
     {
       id: 3,
-      img: weather,
-      title: 'Weather app',
-      description: 'It is a React based Weather App which provide weather forecast for cities. Weather App is a useful application for everyone, designed simple, easy to use.',
-      link: 'https://cloudpoint.netlify.app/',
+      img: slide,
+      title: "Slide - Presentation React Website",
+      description:
+        "A responsive presentation website developed using React.js, Vite, and Tailwind CSS, ensuring an engaging user experience across devices.",
+      link: "https://react-presentations.netlify.app",
     },
     {
       id: 4,
-      img: travel,
-      title: 'Travel website landing page',
-      description: 'It is a landing page of travel website.',
-      link: 'https://omark012.github.io/Travel-page/'
+      img: quizzical,
+      title: "Quizzical - Quiz React App",
+      description:
+        "Developed a responsive quiz application using React.js , featuring interactive quizzes with dynamic content rendering and real-timefeedback to deliver an engaging user experience. ",
+      link: "https://omark012.github.io/quiz-react-app/ ",
     },
-  ]
-
+  ];
 
   return (
     <ScrollAnimation
@@ -68,15 +69,26 @@ const Portfolio = () => {
                 <SwiperSlide key={item.id}>
                   <div className="portfolio-card grid">
                     <div className="portfolio-img-wrap">
-                      <a href={item.link} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img src={item.img} alt="there should be a pic" />
                         <p className="portfolio-img-description">Visit 🤚 </p>
                       </a>
                     </div>
                     <div className="portfolio-data">
                       <h3 className="portfolio-title">{item.title}</h3>
-                      <p className="portfolio-description">{item.description}</p>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="btn portfolio-btn flex">
+                      <p className="portfolio-description">
+                        {item.description}
+                      </p>
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn portfolio-btn flex"
+                      >
                         <p>Live Demo</p>
                         <PiArrowUpRightBold />
                       </a>
@@ -89,9 +101,7 @@ const Portfolio = () => {
         </div>
       </section>
     </ScrollAnimation>
-  )
-}
+  );
+};
 
-export default Portfolio
-
-
+export default Portfolio;

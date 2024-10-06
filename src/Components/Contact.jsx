@@ -9,6 +9,7 @@ const Contact = () => {
   };
 
   const [contact, setContact] = useState(defaultContact);
+  const [submissionMessage, setSubmissionMessage] = useState("");
 
   const handleInput = (event) => {
     const { name, value } = event.target;
@@ -21,8 +22,11 @@ const Contact = () => {
 
   const formSubmit = (event) => {
     event.preventDefault();
-    alert(`Thank you for getting in touch!`);
+    setSubmissionMessage("Thank you for getting in touch!");
     setContact(defaultContact);
+    setTimeout(() => {
+      setSubmissionMessage("");
+    }, 3000);
   };
 
   return (
@@ -40,6 +44,9 @@ const Contact = () => {
             <p className="contact-alert">
               Submit the form below to get in touch with me
             </p>
+            {submissionMessage && (
+              <p className="submission-message">{submissionMessage}</p>
+            )}
             <form className="contact-form" onSubmit={formSubmit}>
               <div className="input-container flex">
                 <input
